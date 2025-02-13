@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form J SNOW</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background 1s ease-in-out;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            background: rgba(255, 182, 193, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: #ff4d79;
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        audio {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body id="background">
+    <div class="container">
+        <h1>Hey Babe</h1>
+        <p>Roses are red, <br> Violets are blue, <br> I don't know what to say <br> (LOL) <br> But I guess I love you is enough</p>
+        <p>Happy Valentines 💖</p>
+        <audio controls>
+            <source src="4_5884226107439318790.mp3" type="audio/mp3">
+        </audio>
+    </div>
+
+    <script>
+        const images = [
+            "IMG-20250212-WA0016.jpg",
+            "Screenshot_20250213_110652_WhatsApp.jpg",
+            "IMG-20250212-WA0017.jpg",
+            "IMG-20250212-WA0020.jpg",
+            "IMG-20250212-WA0018.jpg",
+            "IMG-20250202-WA0019.jpg",
+            "IMG-20250111-WA0197.jpg"
+        ]
+
+        let index = 0;
+        function changeBackground() {
+            document.getElementById("background").style.backgroundImage = `url('${images[index]}')`;
+            index = (index + 1) % images.length;
+        }
+        changeBackground();
+        setInterval(changeBackground, 5000);
+    </script>
+</body>
+</html>
